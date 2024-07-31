@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "00ac5c3e68b08e5e",
+        "id": "5bdd5eea0cb1fa61",
         "type": "tabs",
         "children": [
           {
-            "id": "05f3fe5453f0661e",
+            "id": "7e3b5a5fc39e8480",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "image/Pasted image 20240731165223.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -83,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "image/Pasted image 20240731165223.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "image/Pasted image 20240731165223.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "image/Pasted image 20240731165223.png"
-              }
+              "state": {}
             }
           },
           {
@@ -160,10 +154,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "2f52fcd671ffbc60",
+  "active": "7e3b5a5fc39e8480",
   "lastOpenFiles": [
-    "README.md",
     "image/Pasted image 20240731165223.png",
+    "README.md",
     "image/Pasted image 20240731165133.png",
     "image/Pasted image 20240731165101.png",
     "image/Pasted image 20240731165010.png",
