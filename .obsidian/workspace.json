@@ -11,11 +11,9 @@
             "id": "05f3fe5453f0661e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "file": "image/Pasted image 20240731165223.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "image/Pasted image 20240731165223.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "image/Pasted image 20240731165223.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "image/Pasted image 20240731165223.png"
               }
             }
           },
@@ -162,13 +160,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05f3fe5453f0661e",
+  "active": "2f52fcd671ffbc60",
   "lastOpenFiles": [
-    "Pasted image 20240731165223.png",
-    "Pasted image 20240731165133.png",
-    "Pasted image 20240731165101.png",
-    "Pasted image 20240731165010.png",
     "README.md",
+    "image/Pasted image 20240731165223.png",
+    "image/Pasted image 20240731165133.png",
+    "image/Pasted image 20240731165101.png",
+    "image/Pasted image 20240731165010.png",
     "image/Pasted image 20240727105529.png",
     "image",
     "image/Pasted image 20240727075420.png",
