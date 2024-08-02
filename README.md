@@ -1,4 +1,4 @@
-# CS50 笔记
+# CS51 笔记
 
 - week 0
 	- 主要介绍了课程内容：Scratch、C、Javascript、算法、人工智能...(没记住)
@@ -243,3 +243,41 @@
 		- 32位的内存 = $2^{23}$ 内存空间 = 4GB，计算正负值的话为 2G 内存。
 		- 图片有其标准格式，可以通过这些格式在磁盘中实现数据恢复。
 		- `typedef` 可以定义新类型。![[Pasted image 20240731165010.png]]
+- week5
+	- 这周主要讲了 8 种数据结构。
+	- 数据结构是内存中的数据组织形式。
+	- 8 种抽象数据
+		- 列表 `Array`：连续且有序的数据。
+		- 队列 `Queen`：遵循 `FIFO` 的数据。
+			- `enqueen` 入列
+			- `dequeen` 出列
+		- 栈 `stack`：遵循 `LIFO` 的数据。
+			- `push` 从顶部推入
+			- `pop` 从顶部弹出
+		- 链表 `Linked`：可以动态储存的结构，以数据和指针构成。![[Pasted image 20240802140844.png]]
+		  ```c
+		  typedef struct node
+		  {
+			  int number;
+			  struct node *next;
+		  }
+		  node;
+		   ```
+		- 树 `tree`：由数据和两个指针构成![[Pasted image 20240802140908.png]]
+		  ```c
+		  typedef struct node
+		  {
+			  int number;
+			  struct node *left;
+			  struct node *right;
+		  }
+		  node;
+		   ```
+		- 字典 `dictionary`：由键值对构成的数据。
+		- 哈希表 `Hash table`：由数组和链表构成的数据。![[Pasted image 20240802140933.png]]
+			- 哈希函数：将较大值转换为较小且可预测的数据。
+		- `Tries`![[Pasted image 20240802140955.png]]
+	- 其他
+		- 内存泄露：未能正确的释放不再使用的内存，使内存不断被消耗。课程中在创建链表时出现。
+		- 元数据
+		- `(n*).number` 简写为 `n->number`
