@@ -188,7 +188,8 @@
 	- 其他
 		- 伪代码有利于思考问题，建议多用。
 		- `time` 可以获取代码的运行时间。
-- week4![[Pasted image 20240731165223.png]]
+- week4
+	- ![[Pasted image 20240731165223.png]]
 	- 这一节主要讲解了：十六进制数、指针，以及最后实现图片处理。
 	- 十六进制数
 		- `0xff`
@@ -334,14 +335,117 @@
 		- 由于计算机更擅长处理数字，所以重复数字要比重复字符串更好。
 		- 默认情况下，主键会自动加入索引。
 - week 8
-	- router：链接不同地方的主机
-	- IP：标识一台物理设备
-	- TCP：指定设备中的程序，起到多路复用的作用
-		- 80：HTTP
-		- 443：HTTPS
-	- DNS：域名和 IP 对应表
+	- ![[Pasted image 20240813150543.png]]
+	- routers：
+		- 链接不同地方的主机，
+		- 两点之间的点可以视为路由器
+		- 需要考虑 `路径决策(routing decisions)` 问题
+	- IP（`internet protocol`）：
+		- 在互联网上，计算机相互识别的方式。
+		- 世界上每台计算机都有唯一的地址。
+		- `#.#.#.#`
+		- `#` 由 `32-bits` 表示（ `0 - 255` 的数字），可以表示 四十亿 个地址。（新版由 `128-bits` 表示） 
+	- TCP （`transmission control protocol`）：用于区分网络服务
+		- `80`：`HTTP`
+		- `443`：`HTTPS`
+	- DNS（`domain name systems`）：互联网上的服务器集合，域名和 IP 对应表。DNS只是保存一个表或数据库，将特定的完全合格域名链接到特定的IP地址。
 	- DHCP：IP 分配
-	- HTTP/HTTPS：网络链接协议，规定的信息传输的标准
-	- HTML：只关乎页面展现的标记语言
+	- HTTP（`hypertext transfer protocol`）/HTTPS：`https://www.example.com`
+		- 应用级别的协议
+		- `.com`：顶级域名（`top-level domain`），用于表示与此地址关联的组织的位置或类型。
+		- `curl -I https://harvard.edu`
+		- 请求方式：`POST` 和 `GET`
+		- 响应码：
+		  ```javascript
+		  200 OK 
+		  301 Moved Permanently 
+		  302 Found 
+		  304 Not Modified 
+		  304 Temporary Redirect 
+		  401 Unauthorized 
+		  403 Forbidden 
+		  404 Not Found 
+		  418 I'm a Teapot 
+		  500 Internal Server Error 
+		  503 Service Unavailable
+			```
+	- HTML（`hypertext markup language`）：只关乎页面展现的标记语言![[Pasted image 20240813151642.png]]
 		- 浏览器开发者工具
 		- `curl -I https://www.harvel.com/`
+		- 标签
+			- `<p>`
+			- `<h1>`
+			- `<lu>` 
+				- `<li>`
+			- `<lo>`
+				- `<li>`
+			- `<table>`
+				- `<tr>`
+					- `<td>`
+			- `<img alt="" src="">`
+			- `<video controls muted>`
+				- `<source src="" type="video/mp4">`
+			- `<a href="">`
+			- `<meta property="" content="">`
+			- `<input name="" type="" value="" autocomplete="" autofocus placeholder="" pattern=".+@.+\.edu">`
+			- `<button>`
+	- css（`cascading style sheet`）用于微调 html 的美观性
+	- javascript：一种实现页面交互的编程语言。
+		- 函数
+			- `alert()`
+			- `<form onsubmit="greet(); return false;>`
+			- `document.addEventLister('DOMContentLoaded', function(){})`
+			- `document.querySelector().addEventListener('submit, function(){})`
+			- `window.setInterval(function, 500)`
+			- `startsWith()`
+			- 获取地理位置
+			  ```javascript
+				  navigator.geolocation.getCurrentPosition(function(position){
+					  document.write(position.coords.latitude + ", " + position.coords.longitude);
+				  }); 
+			    ```
+- week9 
+	- 这周综合了 python、flask、javascript、sql、html、css、http 来制作一个网站。
+	- 主要是对框架的使用上，可以看文档，这里没有太多记录。
+	- Flask 的几个重要的库![[Pasted image 20240823134737.png]]
+		- `Flask`：主要框架。
+		- `render_template`：用于渲染网页
+		- `request`： 用于处理网络请求 `POST` 和 `GET`
+		- `redirect`：用于重定向请求
+	- From 的重要作用是提交请求。![[Pasted image 20240823135024.png]]
+	- Session 用户再一次会话中识别当前用户是谁![[Pasted image 20240823135552.png]]
+	  ```python
+		from flask import Flask
+		from flask_session import Session
+
+		# Configure app
+		app = Flask(__name__)
+		
+		# Configure session
+		app.config["SESSION_PERMANENT"] = False
+		app.config["SESSION_TYPE"] = "filesystem"
+		Session(app)
+		```
+	- JSON 的使用
+	  ```python
+		  from flask import jsonify
+		  
+		  return jsonify(shows)
+		```
+	- 
+- week10
+	- 这是最后一周，主要介绍了**加密**
+		- 加密的几种方式
+			- 密码管理（Password Managers）
+			- 双因认证（Two-factor Authentication）
+			- 哈希（Hashing）
+			- Cryptography：利用公钥和私钥
+			- 密钥（Passkeys）：通过设备创建唯一签名，用户名和密码可能很快就过时了。
+			- Encryption：加密数据的方法。
+				- 端对端加密（End-to-end encryption）可以防止中间人窥探
+		- 解密的几种方式
+			- 暴力破解![[Pasted image 20240823140046.png]]
+			- 彩虹字典
+		- 数据删除（Deletion）：通常的删除会保留数据残留。
+		- 安全删除（Secure deletion）：将残余数据变成 0 或是 1
+		- 也可以通过全盘加密的方式来保护数据。
